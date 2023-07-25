@@ -8,18 +8,18 @@ drone = api.navigation(timeout=120000)
 # at least 3sec sleep time for the drone interface to initialize properly
 time.sleep(3)
 
-print "taking off"
+print ("taking off")
 drone.take_off(5.0)
 
-print "flying in square"
-drone.position_set(6.5, 0, 0, relative=True)
-drone.position_set(0, 6.5, 0, relative=True)
-drone.position_set(-6.5, 0, 0, relative=True)
-drone.position_set(0, -6.5, 0, relative=True)
+print ("flying in square")
+drone.position_set(6.5, 0, 5, relative=True)
+drone.position_set(0, 6.5, 5, relative=True)
+drone.position_set(-6.5, 0, 5, relative=True)
+drone.position_set(0, -6.5, 5, relative=True)
 
-print "landing"
+print ("landing")
 drone.land(False)
-print "mission complete!"
+print ("mission complete!")
 
 # shutdown the instance
 drone.disconnect()
