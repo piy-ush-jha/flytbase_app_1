@@ -9,7 +9,7 @@ drone = api.navigation(timeout=120000)
 time.sleep(3)
 
 print ("taking off")
-drone.take_off(10.0)
+drone.take_off(5.0)
 
 print ("flying in triangle")
 drone.position_set(6.5, 0, 0, relative=True)
